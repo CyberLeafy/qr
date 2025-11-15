@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Momo+Signature&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         :root {
@@ -93,8 +94,22 @@
             text-align: center;
         }
 
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .name-heading-font {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+
         .divider {
-            width: 80px;
+            width: 300px;
             height: 2px;
             background: #eef2ff;
             margin: 10px auto 18px;
@@ -151,7 +166,7 @@
             border-radius: 50%;
             flex: 0 0 34px;
             display: grid;
-            place-items: center; 
+            place-items: center;
             color: #fff;
             font-size: 18px;
         }
@@ -353,7 +368,8 @@
         <section class="card" aria-labelledby="contact-heading">
             <div class="avatar" aria-hidden="true">
             </div>
-            <h1 id="contact-heading">Contact Us</h1>
+            <h2 class="name-heading-font">Hey Everyone👋,</h2>
+            <h1 class="name-heading-font" id="contact-heading">I'm Aditya Jaiswal</h1>
             <div class="divider" aria-hidden="true"></div>
 
             <p class="section-title">Find me on</p>
@@ -420,7 +436,7 @@
         // You can also inject dynamic links from a JSON config for easier maintenance.
 
         // Password required for access
-        const SITE_PASSWORD = "ragini@"; // change this to your password
+        const SITE_PASSWORD = "aadi@"; // change this to your password
 
         // Form and overlay handling
         const overlay = document.getElementById('pw-overlay');
@@ -449,6 +465,5 @@
         pwInput.focus();
     </script>
 </body>
-
 
 </html>
