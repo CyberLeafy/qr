@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us • Links</title>
+    <meta name="description" content="Find me on Instagram, GitHub, Web, YouTube." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --brand: #4c6edb;
+            /* header background */
+            --card: #ffffff;
+            /* surface card */
+            --text: #101828;
+            /* primary text */
+            --muted: #667085;
+            /* secondary text */
+            --row: #f8fafc;
+            /* link row bg */
+            --ring: #dbe3ff;
+            /* focus ring */
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(16, 24, 40, .08);
+            --row-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+            background: #f2f4f7;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.4;
+        }
+
+        /* Header band */
+        .band {
+            background: var(--brand);
+            height: 180px;
+            width: 100%;
+        }
+
+        /* Page container */
+        .wrap {
+            max-width: 680px;
+            margin: -90px auto 56px;
+            /* overlap the band */
+            padding: 0 16px;
+        }
+
+        /* Card */
+        .card {
+            position: relative;
+            background: var(--card);
+            border-radius: calc(var(--radius) + 8px);
+            box-shadow: var(--shadow);
+            padding: 80px 20px 24px;
+            animation: fadeUp .5s ease both;
+        }
+
+        /* Avatar overlapping the card */
+        .avatar {
+            position: absolute;
+            top: -56px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            border: 8px solid var(--card);
+            background: #e6edf9 url('image/img.jpeg') center/cover no-repeat;
+            box-shadow: 0 6px 20px rgba(16, 24, 40, .15);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: #eef2ff;
+            margin: 10px auto 18px;
+            border-radius: 1px;
+        }
+
+        .section-title {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 8px 6px 12px;
+        }
+
+        /* Links stack */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--row);
+            border-radius: 12px;
+            padding: 14px 14px;
+            box-shadow: var(--row-shadow);
+            text-decoration: none;
+            color: inherit;
+            transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+            outline: 0;
+        }
+
+        .row:focus-visible {
+            box-shadow: 0 0 0 4px var(--ring), var(--row-shadow);
+        }
+
+        .row:hover {
+            background: #eef2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 24, 40, .10);
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            flex: 0 0 34px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .ig {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+        }
+
+        .gh {
+            background: #2b3137;
+        }
+
+        .web {
+            background: #111827;
+        }
+
+        .yt {
+            background: #ff0033;
+        }
+
+        .meta {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .arrow {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #ffffff;
+            box-shadow: var(--row-shadow);
+            color: #6b7280;
+            flex: 0 0 22px;
+        }
+
+        /* Footer */
+        .foot {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 18px;
+        }
+
+        /* Desktop tweaks */
+        @media (min-width:768px) {
+            .band {
+                height: 220px
+            }
+
+            .card {
+                padding: 92px 32px 26px
+            }
+
+            h1 {
+                font-size: 32px
+            }
+
+            .row {
+                padding: 16px 16px
+            }
+
+            .title {
+                font-size: 17px
+            }
+
+            .subtitle {
+                font-size: 13px
+            }
+
+            .avatar {
+                width: 128px;
+                height: 128px;
+                top: -64px
+            }
+        }
+
+        /* Entry animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+
+        /* PW Overlay styles */
+        .pw-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(44, 53, 71, 0.82);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .pw-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+            padding: 36px 24px 24px;
+            width: 100%;
+            max-width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            animation: fadeUp .5s cubic-bezier(.2, .6, .45, 1.3) both;
+        }
+
+        .pw-box label {
+            font-size: 15px;
+            color: #344054;
+            margin-bottom: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .pw-box input {
+            font-size: 17px;
+            padding: 12px 14px;
+            border: 1.5px solid #c6d0e8;
+            border-radius: 10px;
+            outline: none;
+            margin-bottom: 14px;
+            transition: border .2s;
+        }
+
+        .pw-box input:focus {
+            border-color: #4c6edb;
+        }
+
+        .pw-box button {
+            background: #4c6edb;
+            color: #fff;
+            font-size: 16px;
+            padding: 13px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background .17s;
+        }
+
+        .pw-box button:hover {
+            background: #3453b7;
+        }
+
+        .pw-error {
+            color: #e00;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 2px;
+            min-height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PASSWORD OVERLAY -->
+    <div class="pw-overlay" id="pw-overlay">
+        <form class="pw-box" id="pw-form" autocomplete="off">
+            <label for="pw-input">Enter password to view site</label>
+            <input id="pw-input" type="password" autocomplete="off" required />
+            <button type="submit">Access</button>
+            <div class="pw-error" id="pw-error"></div>
+        </form>
+    </div>
+
+    <!-- main content  -->
+    <div class="band" aria-hidden="true"></div>
+
+    <main class="wrap" id="main-content" style="display:none">
+        <section class="card" aria-labelledby="contact-heading">
+            <div class="avatar" aria-hidden="true">
+            </div>
+            <h1 id="contact-heading">Contact Us</h1>
+            <div class="divider" aria-hidden="true"></div>
+
+            <p class="section-title">Find me on</p>
+
+            <nav class="links" aria-label="Primary links">
+                <a class="row" href="https://instagram.com/aditya_jaiswal74" target="_blank" rel="noopener">
+                    <span class="left">
+                        <span class="icon ig" aria-hidden="true"><i class="fa fa-instagram"></i></span>
+                        <span class="meta">
+                            <span class="title">Instagram</span>
+                            <span class="subtitle">Follow me</span>
+                        </span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">➜</span>
+                </a>
+
+                <a class="row" href="https://github.com/CyberLeafy" target="_blank" rel="noopener">
+                    <span class="left">
+                        <span class="icon gh" aria-hidden="true"><i class="fa fa-github"></i></span>
+                        <span class="meta">
+                            <span class="title">GitHub</span>
+                            <span class="subtitle">Follow me</span>
+                        </span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">➜</span>
+                </a>
+
+                <a class="row" href="https://adityajaiswal7525.pythonanywhere.com" target="_blank" rel="noopener">
+                    <span class="left">
+                        <span class="icon web" aria-hidden="true"><i class="fa fa-globe"></i></span>
+                        <span class="meta">
+                            <span class="title">Website</span>
+                            <span class="subtitle">Visit Website</span>
+                        </span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">➜</span>
+                </a>
+
+                <a class="row" href="https://youtube.com/@spider_code" target="_blank" rel="noopener">
+                    <span class="left">
+                        <span class="icon yt" aria-hidden="true"><i class="fa fa-youtube"></i></span>
+                        <span class="meta">
+                            <span class="title">YouTube</span>
+                            <span class="subtitle">Visit my YouTube Channel</span>
+                        </span>
+                    </span>
+                    <span class="arrow" aria-hidden="true">➜</span>
+                </a>
+            </nav>
+
+            <p class="foot">© 2025 CyberLeafy</p>
+        </section>
+    </main>
+
+    <script>
+        // Optional: small enhancement to add a subtle ripple/press effect on tap
+        document.querySelectorAll('.row').forEach(row => {
+            row.addEventListener('pointerdown', () => row.style.transform = 'translateY(0)');
+            row.addEventListener('pointerup', () => row.style.transform = 'translateY(-2px)');
+            row.addEventListener('pointerleave', () => row.style.transform = '');
+        });
+
+        // Replace icons with SVGs if you prefer; placeholders are used here.
+        // You can also inject dynamic links from a JSON config for easier maintenance.
+
+        // Password required for access
+        const SITE_PASSWORD = "ragini@"; // change this to your password
+
+        // Form and overlay handling
+        const overlay = document.getElementById('pw-overlay');
+        const form = document.getElementById('pw-form');
+        const pwInput = document.getElementById('pw-input');
+        const error = document.getElementById('pw-error');
+        const mainContent = document.getElementById('main-content');
+
+        // Prevent scrolling when overlay is present
+        document.body.style.overflow = 'hidden';
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (pwInput.value === SITE_PASSWORD) {
+                overlay.style.display = 'none';
+                document.body.style.overflow = '';
+                mainContent.style.display = '';
+            } else {
+                error.textContent = "Invalid password. Try again!";
+                pwInput.value = "";
+                pwInput.focus();
+            }
+        });
+
+        // Optional: autofocus input on open
+        pwInput.focus();
+    </script>
+</body>
+
+</html>
