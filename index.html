@@ -1,580 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact Us • Links</title>
-    <meta name="description" content="Find me on Instagram, GitHub, Web, YouTube." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Momo+Signature&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        :root {
-            --brand: #4c6edb;
-            /* header background */
-            --card: #ffffff;
-            /* surface card */
-            --text: #101828;
-            /* primary text */
-            --muted: #667085;
-            /* secondary text */
-            --row: #f8fafc;
-            /* link row bg */
-            --ring: #dbe3ff;
-            /* focus ring */
-            --radius: 16px;
-            --shadow: 0 10px 30px rgba(16, 24, 40, .08);
-            --row-shadow: 0 1px 2px rgba(16, 24, 40, .06);
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        html,
-        body {
-            height: 100%
-        }
-
-        body {
-            margin: 0;
-            font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            color: var(--text);
-            background: #f2f4f7;
-            -webkit-font-smoothing: antialiased;
-            line-height: 1.4;
-        }
-
-        /* Page container */
-        .wrap {
-            max-width: 680px;
-            margin: -90px auto 56px;
-            /* overlap the band */
-            padding: 0 16px;
-        }
-
-        /* Card */
-        .card {
-            position: relative;
-            background: var(--card);
-            border-radius: calc(var(--radius) + 8px);
-            box-shadow: var(--shadow);
-            padding: 80px 20px 24px;
-            animation: fadeUp .5s ease both;
-        }
-
-        /* Avatar overlapping the card */
-        .avatar {
-            position: absolute;
-            top: -56px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 112px;
-            height: 112px;
-            border-radius: 50%;
-            border: 8px solid var(--card);
-            background: #e6edf9 url('image/img.jpeg') center/cover no-repeat;
-            box-shadow: 0 6px 20px rgba(16, 24, 40, .15);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: 600;
-            text-align: center;
-            background: linear-gradient(135deg, #2193b0, #6dd5ed, #1e3c72, #2a5298, #5bc0eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-        }
-
-        h2 {
-            text-align: center;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .name-heading-font {
-            font-family: "Dancing Script", cursive;
-            font-optical-sizing: auto;
-            font-weight: 700;
-            font-style: normal;
-        }
-
-
-        .divider {
-            width: 250px;
-            height: 2px;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #84fab0);
-            margin: 10px auto 18px;
-            border-radius: 1px;
-        }
-
-        .section-title {
-            color: var(--muted);
-            font-size: 14px;
-            margin: 8px 6px 12px;
-        }
-
-        /* Links stack */
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--row);
-            border-radius: 12px;
-            padding: 14px 14px;
-            box-shadow: var(--row-shadow);
-            text-decoration: none;
-            color: inherit;
-            transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
-            outline: 0;
-        }
-
-        .row:focus-visible {
-            box-shadow: 0 0 0 4px var(--ring), var(--row-shadow);
-        }
-
-        .row:hover {
-            background: #eef2ff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(16, 24, 40, .10);
-        }
-
-        .left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 0;
-        }
-
-        .icon {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            flex: 0 0 34px;
-            display: grid;
-            place-items: center;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .ig {
-            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-        }
-
-        .gh {
-            background: #2b3137;
-        }
-
-        .web {
-            background: #111827;
-        }
-
-        .yt {
-            background: linear-gradient(45deg, #FF0000, #CC0000);
-        }
-
-        .email {
-            background: linear-gradient(135deg, #2193b0, #6dd5ed, #1e3c72, #2a5298, #5bc0eb);
-        }
-
-        .meta {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-        }
-
-        .title {
-            font-size: 16px;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .subtitle {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 2px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .arrow {
-            width: 22px;
-            height: 22px;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            background: #ffffff;
-            box-shadow: var(--row-shadow);
-            color: #6b7280;
-            flex: 0 0 22px;
-        }
-
-        /* Footer */
-        .foot {
-            text-align: center;
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 18px;
-        }
-
-        /* Desktop tweaks */
-        @media (min-width:768px) {
-            .band {
-                height: 220px
-            }
-
-            .card {
-                padding: 92px 32px 26px
-            }
-
-            h1 {
-                font-size: 32px
-            }
-
-            .row {
-                padding: 16px 16px
-            }
-
-            .title {
-                font-size: 17px
-            }
-
-            .subtitle {
-                font-size: 13px
-            }
-
-            .avatar {
-                width: 128px;
-                height: 128px;
-                top: -64px
-            }
-        }
-
-        /* Entry animation */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(8px)
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0)
-            }
-        }
-
-
-        /* PW Overlay styles */
-        .pw-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(44, 53, 71, 0.82);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 100;
-        }
-
-        .pw-box {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
-            padding: 36px 24px 24px;
-            width: 100%;
-            max-width: 340px;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            animation: fadeUp .5s cubic-bezier(.2, .6, .45, 1.3) both;
-        }
-
-        .pw-box label {
-            font-size: 15px;
-            color: #344054;
-            margin-bottom: 16px;
-            font-weight: 500;
-            text-align: center;
-        }
-
-        .pw-box input {
-            font-size: 17px;
-            padding: 12px 14px;
-            border: 1.5px solid #c6d0e8;
-            border-radius: 10px;
-            outline: none;
-            margin-bottom: 14px;
-            transition: border .2s;
-        }
-
-        .pw-box input:focus {
-            border-color: #4c6edb;
-        }
-
-        .pw-box button {
-            background: #4c6edb;
-            color: #fff;
-            font-size: 16px;
-            padding: 13px 0;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background .17s;
-        }
-
-        .pw-box button:hover {
-            background: #3453b7;
-        }
-
-        .pw-error {
-            color: #e00;
-            font-size: 13px;
-            text-align: center;
-            margin-top: 2px;
-            min-height: 16px;
-        }
-
-        /* Header band */
-        .band {
-            background: #e6edf9 url('image/banner.jpg') center/cover no-repeat;
-            height: 180px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* styling decorator  */
-        .header-shapes {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.18;
-            filter: blur(8px);
-            mix-blend-mode: screen;
-            animation: floatShape 6s ease-in-out infinite alternate;
-        }
-
-        .shape1 {
-            width: 120px;
-            height: 120px;
-            background: radial-gradient(circle at 30% 30%, #fff7c7 92%, transparent 100%);
-            left: 8%;
-            top: 15%;
-            animation-delay: 0s;
-        }
-
-        .shape2 {
-            width: 160px;
-            height: 160px;
-            background: radial-gradient(circle at 70% 60%, #ff8dd7 92%, transparent 100%);
-            right: 6%;
-            top: 12%;
-            animation-delay: 0.9s;
-        }
-
-        .shape3 {
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle at 60% 80%, #bbf7ae 92%, transparent 100%);
-            left: 35%;
-            top: 2%;
-            animation-delay: 2.5s;
-        }
-
-        .shape4 {
-            width: 90px;
-            height: 90px;
-            background: radial-gradient(circle at 50% 50%, #7ee7ff 94%, transparent 100%);
-            right: 22%;
-            top: 45%;
-            animation-delay: 1.8s;
-        }
-
-        .shape5 {
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle at 50% 65%, #b19fff 90%, transparent 100%);
-            left: 70%;
-            top: 60%;
-            animation-delay: 1.2s;
-        }
-
-        @keyframes floatShape {
-            0% {
-                transform: translateY(0) scale(1);
-            }
-
-            55% {
-                transform: translateY(-16px) scale(1.07) rotate(-8deg);
-            }
-
-            100% {
-                transform: translateY(12px) scale(0.97) rotate(6deg);
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- PASSWORD OVERLAY -->
-    <div class="pw-overlay" id="pw-overlay">
-        <form class="pw-box" id="pw-form" autocomplete="off">
-            <label for="pw-input">Enter password to view site</label>
-            <input id="pw-input" type="password" autocomplete="off" required />
-            <button type="submit">Access</button>
-            <div class="pw-error" id="pw-error"></div>
-        </form>
-    </div>
-
-    <!-- main content  -->
-    <div class="band" aria-hidden="true" style="visibility: hidden;">
-        <div class="header-shapes">
-            <span class="shape shape1"></span>
-            <span class="shape shape2"></span>
-            <span class="shape shape3"></span>
-            <span class="shape shape4"></span>
-            <span class="shape shape5"></span>
-        </div>
-    </div>
-
-
-    <main class="wrap" id="main-content" style="display:none">
-        <section class="card" aria-labelledby="contact-heading">
-            <div class="avatar" aria-hidden="true">
-            </div>
-            <h2 class="name-heading-font">Hey Everyone👋,</h2>
-            <h1 class="name-heading-font" id="contact-heading">I'm Aditya Jaiswal</h1>
-            <div class="divider" aria-hidden="true"></div>
-
-            <p class="section-title">Find me on</p>
-
-            <nav class="links" aria-label="Primary links">
-                <a class="row" href="https://instagram.com/aditya_jaiswal74" target="_blank" rel="noopener">
-                    <span class="left">
-                        <span class="icon ig" aria-hidden="true"><i class="fa fa-instagram"></i></span>
-                        <span class="meta">
-                            <span class="title">Instagram</span>
-                            <span class="subtitle">Follow me</span>
-                        </span>
-                    </span>
-                    <span class="arrow" aria-hidden="true">➜</span>
-                </a>
-
-                <a class="row" href="https://github.com/CyberLeafy" target="_blank" rel="noopener">
-                    <span class="left">
-                        <span class="icon gh" aria-hidden="true"><i class="fa fa-github"></i></span>
-                        <span class="meta">
-                            <span class="title">GitHub</span>
-                            <span class="subtitle">Follow me</span>
-                        </span>
-                    </span>
-                    <span class="arrow" aria-hidden="true">➜</span>
-                </a>
-
-                <a class="row" href="https://youtube.com/@spider_code" target="_blank" rel="noopener">
-                    <span class="left">
-                        <span class="icon yt" aria-hidden="true"><i class="fa fa-youtube"></i></span>
-                        <span class="meta">
-                            <span class="title">YouTube</span>
-                            <span class="subtitle">Subscribe Channel</span>
-                        </span>
-                    </span>
-                    <span class="arrow" aria-hidden="true">➜</span>
-                </a>
-
-                <a class="row" href="mailto:adityajaiswal7488@gmail.com" target="_blank" rel="noopener">
-                    <span class="left">
-                        <span class="icon email" aria-hidden="true"><i class="fa fa-envelope"></i></span>
-                        <span class="meta">
-                            <span class="title">Email</span>
-                            <span class="subtitle">Contact me</span>
-                        </span>
-                    </span>
-                    <span class="arrow" aria-hidden="true">➜</span>
-                </a>
-
-                <a class="row" href="https://adityajaiswal7525.pythonanywhere.com" target="_blank" rel="noopener">
-                    <span class="left">
-                        <span class="icon web" aria-hidden="true"><i class="fa fa-globe"></i></span>
-                        <span class="meta">
-                            <span class="title">Website</span>
-                            <span class="subtitle">Visit Website</span>
-                        </span>
-                    </span>
-                    <span class="arrow" aria-hidden="true">➜</span>
-                </a>
-            </nav>
-
-        </section>
-
-        <footer class="foot">© 2025 CyberLeafy</footer>
-    </main>
-
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberLeafy | Developer Portfolio</title>
+    <meta name="description" content="Portfolio of CyberLeafy - Web Developer & Creative Coder" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Optional: small enhancement to add a subtle ripple/press effect on tap
-        document.querySelectorAll('.row').forEach(row => {
-            row.addEventListener('pointerdown', () => row.style.transform = 'translateY(0)');
-            row.addEventListener('pointerup', () => row.style.transform = 'translateY(-2px)');
-            row.addEventListener('pointerleave', () => row.style.transform = '');
-        });
-
-        // Replace icons with SVGs if you prefer; placeholders are used here.
-        // You can also inject dynamic links from a JSON config for easier maintenance.
-
-        // Password required for access
-        const SITE_PASSWORD = "aadi@"; // change this to your password
-
-        // Form and overlay handling
-        const overlay = document.getElementById('pw-overlay');
-        const form = document.getElementById('pw-form');
-        const pwInput = document.getElementById('pw-input');
-        const error = document.getElementById('pw-error');
-        const mainContent = document.getElementById('main-content');
-
-        // Prevent scrolling when overlay is present
-        document.body.style.overflow = 'hidden';
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (pwInput.value === SITE_PASSWORD) {
-                overlay.style.display = 'none';
-                document.body.style.overflow = '';
-                mainContent.style.display = '';
-                document.querySelector('.band').style.visibility = 'visible';
-            } else {
-                error.textContent = "Invalid password. Try again!";
-                pwInput.value = "";
-                pwInput.focus();
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                200: '#bbf7d0',
+                300: '#86efac',
+                400: '#4ade80',
+                500: '#22c55e',
+                600: '#16a34a',
+                700: '#15803d',
+                800: '#166534',
+                900: '#14532d',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
             }
-        });
-
-        // autofocus input on open
-        pwInput.focus();
+          },
+        },
+      }
     </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 5px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #475569;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
-
 </html>
