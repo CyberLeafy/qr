@@ -80,8 +80,8 @@
         /* Utilities */
         .glass-nav {
             background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            /* backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); */
         }
         .dark .glass-nav {
             background: rgba(15, 23, 42, 0.85);
@@ -169,7 +169,7 @@
         </div>
 
         <!-- Mobile Nav Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40 flex flex-col justify-center items-center gap-8 md:hidden">
+        <div id="mobile-menu" class="fixed inset-1 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 z-40 flex flex-col justify-center items-center gap-8 md:hidden">
             <a href="#home" class="mobile-link text-2xl font-bold text-slate-800 dark:text-slate-200 hover:text-primary-500">Home</a>
             <a href="#about" class="mobile-link text-2xl font-bold text-slate-800 dark:text-slate-200 hover:text-primary-500">About</a>
             <a href="#skills" class="mobile-link text-2xl font-bold text-slate-800 dark:text-slate-200 hover:text-primary-500">Skills</a>
@@ -290,7 +290,7 @@
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Next.js</span>
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Tailwind CSS</span>
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Redux</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Framer Motion</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Bootstrap</span>
                     </div>
                 </div>
 
@@ -302,17 +302,16 @@
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Express</span>
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">PostgreSQL</span>
                         <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Docker</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">AWS</span>
                     </div>
                 </div>
                 
                  <!-- Design -->
                 <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow">
-                    <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-6 flex items-center before:content-[''] before:w-1.5 before:h-6 before:bg-primary-500 before:mr-3 before:rounded-full">Design</h3>
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-6 flex items-center before:content-[''] before:w-1.5 before:h-6 before:bg-primary-500 before:mr-3 before:rounded-full">Framework</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Figma</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">UI/UX Principles</span>
-                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Accessibility</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Django</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">FastApi</span>
+                        <span class="px-4 py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg text-sm font-medium hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-300 transition-colors cursor-default">Flask</span>
                     </div>
                 </div>
             </div>
@@ -424,7 +423,7 @@
                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </p>
                 
-                <a href="mailto:contact@cyberleafy.dev" class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transition-all hover:-translate-y-1">
+                <a href="mailto:adityajaiswal7488@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transition-all hover:-translate-y-1">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                     Say Hello
                 </a>
@@ -434,20 +433,20 @@
                 <a href="https://github.com/CyberLeafy" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-primary-500 dark:hover:text-primary-400 transition-all hover:-translate-y-1 group" aria-label="GitHub">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-pink-500 transition-all hover:-translate-y-1" aria-label="Instagram">
+                <a href="https://instagram.com/aditya_jaiswal74" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-pink-500 transition-all hover:-translate-y-1" aria-label="Instagram">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-red-500 transition-all hover:-translate-y-1" aria-label="YouTube">
+                <a href="https://youtube.com/@spider_code" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-red-500 transition-all hover:-translate-y-1" aria-label="YouTube">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-blue-500 transition-all hover:-translate-y-1" aria-label="Website">
+                <a href="https://adityajaiswal7525.pythonanywhere.com" target="_blank" rel="noopener noreferrer" class="p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md hover:text-blue-500 transition-all hover:-translate-y-1" aria-label="Website">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 </a>
             </div>
 
             <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-200 dark:border-slate-800 pt-8 gap-4">
                 <p class="text-slate-500 dark:text-slate-500 text-sm">
-                    © <span id="year"></span> CyberLeafy. Built with pure HTML/JS & Tailwind.
+                    © <span id="year"></span> CyberLeafy.
                 </p>
                 
                 <button id="scroll-top" class="p-3 bg-white dark:bg-slate-800 rounded-full shadow hover:shadow-md hover:text-primary-500 transition-colors" aria-label="Scroll to top">
@@ -544,7 +543,7 @@
         // --- Header Scroll Logic ---
         function handleScroll() {
             if (window.scrollY > 20) {
-                header.classList.add('glass-nav', 'shadow-sm', 'py-3');
+                header.classList.add('glass-nav','shadow-sm', 'py-3');
                 header.classList.remove('py-5');
             } else {
                 header.classList.remove('glass-nav', 'shadow-sm', 'py-3');
